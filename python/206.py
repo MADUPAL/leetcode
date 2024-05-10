@@ -23,7 +23,7 @@ class Solution:
         # if not head:
         #     return None
         
-        # newHead = head
+        # newHead = head # initial set
 
         # if head.next:
         #     newHead = self.reverseList(head.next)
