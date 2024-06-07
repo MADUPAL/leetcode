@@ -29,6 +29,26 @@ class Solution:
         # return binarySearch(1, max(piles))
 
         l, r = 1, max(piles)
+
+        ans = 0
+        while l <= r:
+            k = (l+r)//2
+
+            t = 0
+            for pile in piles:
+                t += math.ceil(pile/k)
+                # t += pile//k
+                # t += 0 if pile%k == 0 else 1
+                        
+            if t > h:
+                l = k+1
+            elif t <= h:
+                r = k-1
+                ans = k
+        
+        return ans
+
+        l, r = 1, max(piles)
         rslt = r
 
         while l <= r:
