@@ -25,3 +25,26 @@ class Solution:
             ans.append(tmp[-1])
         
         return ans
+
+### recap
+# class Solution:
+#     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+#         if not root:
+#             return
+        
+#         q = deque()
+#         q.append(root)
+#         ans = []
+
+#         while q:
+#             last = 0
+#             ans.append(q[-1].val)
+#             for _ in range(len(q)):
+#                 cur = q.popleft()
+
+#                 if cur.left:
+#                     q.append(cur.left)
+#                 if cur.right:
+#                     q.append(cur.right)
+
+#         return ans
