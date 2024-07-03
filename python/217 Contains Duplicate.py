@@ -9,3 +9,5 @@ class Solution:
                 return True
         
         return False
+    
+        # return not len(set(nums)) == len(nums)
