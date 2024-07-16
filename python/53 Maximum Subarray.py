@@ -9,3 +9,11 @@ class Solution:
             maxSum = max(maxSum, curSum)
         
         return maxSum
+    
+        # maxSum, curSum = -10001, 0
+
+        # for n in nums:
+        #     curSum = max(n, curSum+n)
+        #     maxSum = max(maxSum, curSum)
+        
+        # return maxSum
