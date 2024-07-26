@@ -17,3 +17,18 @@ class Solution:
         dfs(0)
 
         return ans
+    
+        # ans = []
+
+        # def subset(idx, s):
+        #     if idx >= len(nums):
+        #         ans.append(s.copy())
+        #         return
+            
+        #     s.append(nums[idx])
+        #     subset(idx+1, s)
+        #     s.pop()
+        #     subset(idx+1, s)
+        
+        # subset(0, [])
+        # return ans
