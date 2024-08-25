@@ -6,7 +6,7 @@
 
 class TrieNode:
     def __init__(self):
-        self.parent = {}
+        self.children = {}
         self.word = False
 
 class Trie:
@@ -18,18 +18,18 @@ class Trie:
         cur = self.root
 
         for c in word:
-            if c not in cur.parent:
-                cur.parent[c] = TrieNode()
-            cur = cur.parent[c]
+            if c not in cur.children:
+                cur.children[c] = TrieNode()
+            cur = cur.children[c]
         cur.word = True
 
     def search(self, word: str) -> bool:
         cur = self.root
 
         for c in word:
-            if c not in cur.parent:
+            if c not in cur.children:
                 return False
-            cur = cur.parent[c]
+            cur = cur.children[c]
         
         return cur.word
 
@@ -37,8 +37,8 @@ class Trie:
         cur = self.root
 
         for c in prefix:
-            if c not in cur.parent:
+            if c not in cur.children:
                 return False
-            cur = cur.parent[c]
+            cur = cur.children[c]
         
         return True
