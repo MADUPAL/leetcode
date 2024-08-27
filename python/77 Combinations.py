@@ -17,3 +17,18 @@ class Solution:
         comb(1, [])
 
         return ans
+    
+        # ans = []
+
+        # def comb(idx, c):
+        #     if len(c) >= k:
+        #         ans.append(c.copy())
+        #         return
+            
+        #     for i in range(idx, n+1):
+        #         c.append(i)
+        #         comb(i+1, c)
+        #         c.pop()
+        # comb(1, [])
+
+        # return ans
