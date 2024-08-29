@@ -30,3 +30,22 @@ class Solution:
                 L += 1
         
         return L
+
+        # L, R = 0, 0
+
+        # while R < len(nums):
+        #     temp = nums[R]
+        #     cnt = 0
+        #     while R < len(nums) and nums[R] == temp:
+        #         R += 1
+        #         cnt += 1
+            
+        #     if cnt >= 2:
+        #         for _ in range(2):
+        #             nums[L] = temp
+        #             L += 1
+        #     else:
+        #         nums[L] = temp
+        #         L += 1
+        
+        # return L
