@@ -35,3 +35,28 @@ class Solution:
             i = j+1+length
 
         return ans
+    
+    # class Solution:
+
+    # def encode(self, strs: List[str]) -> str:
+    #     rslt = ""
+    #     for s in strs:
+    #         rslt += str(len(s))+"#"+s
+        
+    #     return rslt
+
+    # def decode(self, s: str) -> List[str]:
+    #     # print(s)
+    #     i, j = 0, 0
+    #     output = []
+
+    #     while j < len(s):
+    #         while s[i] != "#":
+    #             i += 1
+    #         print(i, j)
+    #         num = int(''.join(s[j:i]))
+    #         j = i+num+1
+            
+    #         output.append(s[i+1:j])
+    #         i = j
+    #     return output
