@@ -33,3 +33,37 @@ class Solution:
             ans = max(ans, length)
         
         return ans
+    
+        # nums = set(nums)
+        # ans = 0
+
+        # for n in nums:
+        #     print(n)
+        #     if n-1 not in nums:
+        #         l = 0
+        #         while n in nums:
+        #             l += 1
+        #             n += 1
+        #         ans = max(l, ans)
+        #     if n+1 not in nums:
+        #         l = 0
+        #         while n in nums:
+        #             l += 1
+        #             n -= 1
+        #         ans = max(l, ans)
+        
+        # return ans
+
+        # nums = set(nums)
+        # ans = 0
+
+        # for n in nums:
+        #     if n-1 in nums:
+        #         continue
+        #     l = 0
+        #     while n in nums:
+        #         l += 1
+        #         n += 1
+        #     ans = max(l, ans)
+        
+        # return ans
