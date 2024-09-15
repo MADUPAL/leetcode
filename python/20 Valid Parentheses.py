@@ -31,3 +31,18 @@ class Solution:
                 return False
         
         return not opened
+    
+        # pSet = { ")": "(", "]": "[", "}": "{" }
+        # stack = []
+        # for p in s:
+        #     if p not in ")]}":
+        #         stack.append(p)
+        #     else:
+        #         if stack:
+        #             t = stack.pop()
+        #             if t != pSet[p]:
+        #                 return False
+        #         else:
+        #             return False
+        
+        # return False if stack else True
