@@ -7,6 +7,6 @@ class Solution:
             t = (target-p) / s
             if stack and stack[-1] >= t:
                 continue
-            stack.append((target-p)/s)
+            stack.append(t)
         
         return len(stack)
