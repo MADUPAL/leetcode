@@ -49,3 +49,34 @@ class Solution:
                 return True
         
         return False
+    
+        N = len(matrix)
+        M = len(matrix[0])
+        
+        row = 0
+        l, r = 0, N-1
+
+        while l <= r:
+            m = (l+r)//2
+
+            if matrix[m][-1] < target:
+                l = m+1
+            elif matrix[m][0] > target:
+                r = m-1
+            elif matrix[m][0] <= target and matrix[m][-1] >= target:
+                row = m
+                break
+
+        l, r = 0, M-1
+
+        while l <= r:
+            m = (l+r)//2
+
+            if matrix[row][m] < target:
+                l = m+1
+            elif matrix[row][m] > target:
+                r = m-1
+            else:
+                return True
+        
+        return False
