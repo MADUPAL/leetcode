@@ -31,3 +31,19 @@ class Solution:
         # head.next = None
 
         # return newHead
+
+        if not head:
+            return None
+
+        def solve(node):
+            if node.next == None:
+                return node
+            
+            root = solve(node.next)
+            cur = node
+            cur.next.next = node
+            cur.next = None
+
+            return root
+        
+        return solve(head)
