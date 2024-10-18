@@ -7,44 +7,20 @@
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
-            return
-        
+            return []
         q = deque()
         q.append(root)
-        ans = []
 
+        ans = []
         while q:
-            tmp = []
             for _ in range(len(q)):
-                node = q.popleft()
-                tmp.append(node.val)
-                if  node.left:
-                    q.append(node.left)
-                if  node.right:
-                    q.append(node.right)
-            ans.append(tmp[-1])
+                cur = q.popleft()
+                last = cur.val
+
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+            ans.append(last)
         
         return ans
-
-### recap
-# class Solution:
-#     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-#         if not root:
-#             return
-        
-#         q = deque()
-#         q.append(root)
-#         ans = []
-
-#         while q:
-#             last = 0
-#             ans.append(q[-1].val)
-#             for _ in range(len(q)):
-#                 cur = q.popleft()
-
-#                 if cur.left:
-#                     q.append(cur.left)
-#                 if cur.right:
-#                     q.append(cur.right)
-
-#         return ans
