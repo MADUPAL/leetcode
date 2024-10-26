@@ -53,4 +53,4 @@ class Solution:
             for j in range(C):
                 dfs(i, j, root, "")
         
-        return ans
+        return list(ans)
